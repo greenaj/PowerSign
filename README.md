@@ -29,6 +29,13 @@ Running
 
 Will create the *prod_sign* configuration given a prod_sign.psd1 file in the current directory.
 
+## Test Setup
+
+
+Microsoft's signtool needs to be in path, call the line below in you profile or session to add signtool.exe in your path:
+> PS> [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17134.0\x64", "Process")
+
+
 ## Notes
 
 Example SignTool Command Line
