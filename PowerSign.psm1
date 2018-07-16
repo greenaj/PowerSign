@@ -56,6 +56,20 @@ Add-Config -File MyConfig.psd1 -Name ForQA
 This will copy the config specified by -File into the user's %LOCALAPPDADA% directory, changing the name
 to the value of the -Name paramter followed by .psd1 .
 
+A sambple config is show below:
+
+@{
+    # list as many rfc3161 timestamping urls as designed.
+    timeStampers = @(   "http://timestamp.globalsign.com/scripts/timstamp.dll",
+                        "http://tsa.startssl.com/rfc3161",
+                        "http://timestamp.comodoca.com/?td=sha256",
+                        "http://sha256timestamp.ws.symantec.com/sha256/timestamp"
+    )
+
+    # Set this to a thumbprint of you code signing certificate.
+    thumbprint  = "b6b248ff8ab1bf545d3f8db6c2695a6863f4bb3c"
+}
+
 #>
 function Add-Config {
     [CmdletBinding()]
